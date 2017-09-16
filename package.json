@@ -1,0 +1,10 @@
+{
+  "name": "sedgewick",
+  "version": "0.0.2",
+  "start": "coffee sedgewick.coffee",
+  "dependencies": {
+    "coffee-script": "^1.12.7",
+    "discord.io": "^2.5.2",
+    "request": "^2.79.0"
+  }
+}
