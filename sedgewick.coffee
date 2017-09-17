@@ -54,6 +54,7 @@ reload = ->
 # Update presence callback
 presence = (error, ..., data) ->
   return console.error error if error
+  return unless data?.response?
   {response: {player_count: count}} = data
   bot.setPresence game: name: "w/ #{count} Plebeians"
 
