@@ -23,7 +23,7 @@ bot.on 'message', (..., {d: event}) ->
   {content: command} = event
   return unless command[0] is '!'
 
-  command = command[1 ..].trim()
+  command = command.trim()[1 ..]
   command = command.toLowerCase()
   return unless command of commands
 
