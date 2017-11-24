@@ -32,6 +32,10 @@ bot.on 'message', (..., {d: event}) ->
     channelID: event.channel_id
     messageID: event.id
 
+  # Is the author even on the server?
+  server = bot.servers[process.env.server_id]
+  return unless event.author.id of server.members
+
   commands[command] event, command
 
 # Welcome message
